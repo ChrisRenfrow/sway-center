@@ -5,9 +5,9 @@ use swayipc::{Connection, EventType, Fallible, NodeType};
 // Else, set the horizontal gaps to zero
 fn main() -> Fallible<()> {
     for _ in Connection::new()?.subscribe([EventType::Window])? {
-        let (focused_output, current_workspace) = focused_output_and_current_workspace().unwrap();
+        let (focused_output, current_workspace) = focused_output_and_current_workspace()?;
         let w_count = workspace_window_count(focused_output.clone(), current_workspace.clone())?;
-        let (width, _) = get_output_dimensions(focused_output.clone()).unwrap();
+        let (width, _) = get_output_dimensions(focused_output.clone())?;
         dbg!(
             focused_output.clone(),
             current_workspace.clone(),
