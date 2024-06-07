@@ -9,7 +9,6 @@ fn main() -> Fallible<()> {
         let w_count = workspace_window_count(focused_output.clone(), current_workspace.clone())?;
         let (width, _) = get_output_dimensions(focused_output.clone()).unwrap();
         dbg!(
-            "active output: {}\ncurrent workspace: {}\nwindow count: {}\noutput width: {}",
             focused_output.clone(),
             current_workspace.clone(),
             w_count,
