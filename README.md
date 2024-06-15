@@ -10,14 +10,14 @@ This program will run on a loop and listen for Sway IPC window events, checking 
 
 For a more manual approach, you may also achieve this functionality with something like the following in your Sway config.
  
-```sway
+```
 # Toggle the horizontal gaps in the current workspace
 bindsym $mod+g gaps horizontal current toggle 600 # adjust for your output size
 ```
 
 Or for a more granular approach you might use something like this.
 
-```sway
+```
 # Increase/reduce/reset horizontal gaps for the current workspace
 mode "gaps" {
     bindsym {
